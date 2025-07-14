@@ -1,14 +1,104 @@
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.deb
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Enfermería – Interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Enfermería (10 semestres)</h1>
+  <p>Haz clic en un ramo para marcarlo como aprobado. Los ramos se desbloquearán según los códigos.</p>
+  <div class="malla">
 
-pkg/
-src/
+    <!-- SEMESTRE 1 -->
+    <div class="semestre">
+      <h2>Semestre 1</h2>
+      <div class="ramo desbloqueado" data-cod="ENFE111" data-deps="">ENFE111 – Introducción a la enfermería</div>
+      <div class="ramo desbloqueado" data-cod="ENFE112" data-deps="">ENFE112 – Anatomía</div>
+      <div class="ramo desbloqueado" data-cod="ENFE113" data-deps="">ENFE113 – Biología</div>
+      <div class="ramo desbloqueado" data-cod="ENFE114" data-deps="">ENFE114 – Química y bioquímica</div>
+      <div class="ramo desbloqueado" data-cod="ENFE115" data-deps="">ENFE115 – Herramientas para la investigación</div>
+      <div class="ramo desbloqueado" data-cod="ENFE116" data-deps="">ENFE116 – Formación general y profesional I</div>
+    </div>
+
+    <!-- SEMESTRE 2 -->
+    <div class="semestre">
+      <h2>Semestre 2</h2>
+      <div class="ramo bloqueado" data-cod="ENFE121" data-deps="ENFE111,ENFE112,ENFE113,ENFE114">ENFE121 – Enfermería en salud familiar y comunitaria I</div>
+      <div class="ramo bloqueado" data-cod="ENFE122" data-deps="ENFE111">ENFE122 – Enfermería en salud mental I</div>
+      <div class="ramo bloqueado" data-cod="ENFE123" data-deps="">ENFE123 – Histología</div>
+      <div class="ramo bloqueado" data-cod="ENFE124" data-deps="">ENFE124 – Fisiología</div>
+      <div class="ramo bloqueado" data-cod="ENFE125" data-deps="">ENFE125 – Microbiología</div>
+    </div>
+
+    <!-- SEMESTRE 3 -->
+    <div class="semestre">
+      <h2>Semestre 3</h2>
+      <div class="ramo bloqueado" data-cod="ENFE211" data-deps="ENFE121,ENFE122,ENFE123,ENFE124,ENFE125">ENFE211 – Enfermería en niñez y adolescencia I</div>
+      <div class="ramo bloqueado" data-cod="ENFE212" data-deps="ENFE123,ENFE124,ENFE125">ENFE212 – Fisiopatología</div>
+      <div class="ramo bloqueado" data-cod="ENFE213" data-deps="ENFE123,ENFE124,ENFE125">ENFE213 – Farmacología en enfermería</div>
+      <div class="ramo bloqueado" data-cod="ENFE214" data-deps="">ENFE214 – Inglés básico</div>
+    </div>
+
+    <!-- SEMESTRE 4 -->
+    <div class="semestre">
+      <h2>Semestre 4</h2>
+      <div class="ramo bloqueado" data-cod="ENFE221" data-deps="ENFE211,ENFE212,ENFE213">ENFE221 – Enfermería en persona adulta</div>
+      <div class="ramo bloqueado" data-cod="ENFE222" data-deps="ENFE211,ENFE212,ENFE213">ENFE222 – Enfermería en envejecimiento</div>
+      <div class="ramo bloqueado" data-cod="ENFE223" data-deps="">ENFE223 – Fundamentos socioculturales para enfermería</div>
+      <div class="ramo bloqueado" data-cod="ENFE224" data-deps="ENFE115">ENFE224 – Introducción a la investigación en enfermería</div>
+      <div class="ramo bloqueado" data-cod="ENFE225" data-deps="">ENFE225 – Formación general y profesional II</div>
+    </div>
+
+    <!-- SEMESTRE 5 -->
+    <div class="semestre">
+      <h2>Semestre 5</h2>
+      <div class="ramo bloqueado" data-cod="ENFE311" data-deps="ENFE211,ENFE222">ENFE311 – Enfermería en personas adultas y mayores</div>
+      <div class="ramo bloqueado" data-cod="ENFE312" data-deps="ENFE225">ENFE312 – Ética y legislación</div>
+      <div class="ramo bloqueado" data-cod="ENFE313" data-deps="ENFE224">ENFE313 – Metodología de la investigación para enfermería I</div>
+      <div class="ramo bloqueado" data-cod="TIP I" data-deps="">TIP I – Taller integración I</div>
+    </div>
+
+    <!-- SEMESTRE 6 -->
+    <div class="semestre">
+      <h2>Semestre 6</h2>
+      <div class="ramo bloqueado" data-cod="ENFE321" data-deps="ENFE311">ENFE321 – Enfermería en niñez y adolescencia II</div>
+      <div class="ramo bloqueado" data-cod="ENFE322" data-deps="ENFE311">ENFE322 – Enfermería en salud mental II</div>
+      <div class="ramo bloqueado" data-cod="ENFE323" data-deps="ENFE313">ENFE323 – Metodología de la investigación para enfermería II</div>
+      <div class="ramo bloqueado" data-cod="TIP II" data-deps="TIP I">TIP II – Taller integración II</div>
+    </div>
+
+    <!-- SEMESTRE 7 -->
+    <div class="semestre">
+      <h2>Semestre 7</h2>
+      <div class="ramo bloqueado" data-cod="ENFE411" data-deps="ENFE321,ENFE322">ENFE411 – Enfermería en salud familiar y comunitaria II</div>
+      <div class="ramo bloqueado" data-cod="ENFE412" data-deps="">ENFE412 – Gestión de calidad e innovación en salud I</div>
+      <div class="ramo bloqueado" data-cod="ENFE413" data-deps="ENFE323">ENFE413 – Trabajo final de grado I</div>
+    </div>
+
+    <!-- SEMESTRE 8 -->
+    <div class="semestre">
+      <h2>Semestre 8</h2>
+      <div class="ramo bloqueado" data-cod="ENFE421" data-deps="ENFE411">ENFE421 – Enfermería en urgencias y desastres</div>
+      <div class="ramo bloqueado" data-cod="ENFE422" data-deps="ENFE412">ENFE422 – Gestión de calidad e innovación en salud II</div>
+      <div class="ramo bloqueado" data-cod="ENFE423" data-deps="ENFE413">ENFE423 – Trabajo final de grado II</div>
+      <div class="ramo bloqueado" data-cod="ENFE424" data-deps="">ENFE424 – Formación general y profesional III</div>
+    </div>
+
+    <!-- SEMESTRE 9 -->
+    <div class="semestre">
+      <h2>Semestre 9</h2>
+      <div class="ramo bloqueado" data-cod="ENFE511" data-deps="ENFE413,ENFE422,ENFE423,ENFE424">ENFE511 – Práctica profesional</div>
+    </div>
+
+    <!-- SEMESTRE 10 -->
+    <div class="semestre">
+      <h2>Semestre 10</h2>
+      <div class="ramo bloqueado" data-cod="ENFE521" data-deps="ENFE412,ENFE422,ENFE423,ENFE424">ENFE521 – Práctica profesional</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
