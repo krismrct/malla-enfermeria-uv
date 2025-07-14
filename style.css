@@ -1,8 +1,85 @@
-body { font-family: sans-serif; background: #f7f7f7; padding: 20px; }
-h1, h2 { color: #005f73; }
-.malla { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.semestre { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-.ramo { margin: 6px 0; padding: 8px; border-radius: 4px; cursor: pointer; user-select: none; }
-.ramo.bloqueado { background: #ddd; color: #666; }
-.ramo.desbloqueado { background: #e0ffe0; color: #000; }
-.ramo.aprobado { background: #4caf50; color: white; text-decoration: line-through; }
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #002B5B;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.semestre {
+  background-color: #FFFFFF;
+  color: #002B5B;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.semestre:hover {
+  transform: translateY(-3px);
+}
+
+.semestre h2 {
+  margin-top: 0;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  color: #004080;
+  border-bottom: 2px solid #A8D0E6;
+  padding-bottom: 5px;
+}
+
+.ramo {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+/* Estado bloqueado */
+.ramo.bloqueado {
+  background-color: #dcdcdc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Estado desbloqueado */
+.ramo.desbloqueado {
+  background-color: #A8D0E6;
+  color: #002B5B;
+}
+
+.ramo.desbloqueado:hover {
+  background-color: #BDE0FE;
+  transform: scale(1.02);
+}
+
+/* Estado aprobado */
+.ramo.aprobado {
+  background-color: #B8E994;
+  color: #004225;
+  text-decoration: line-through;
+}
+
+.ramo.aprobado::after {
+  content: ' ✅';
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+}
