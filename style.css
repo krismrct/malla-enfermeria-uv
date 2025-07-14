@@ -1,0 +1,8 @@
+body { font-family: sans-serif; background: #f7f7f7; padding: 20px; }
+h1, h2 { color: #005f73; }
+.malla { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.semestre { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.ramo { margin: 6px 0; padding: 8px; border-radius: 4px; cursor: pointer; user-select: none; }
+.ramo.bloqueado { background: #ddd; color: #666; }
+.ramo.desbloqueado { background: #e0ffe0; color: #000; }
+.ramo.aprobado { background: #4caf50; color: white; text-decoration: line-through; }
